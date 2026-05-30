@@ -104,7 +104,7 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
       <div class="box-details-content">
         <div class="box-details-title">
           <AppearingText
-            text="David"
+            text="Felipe"
             :steps="1"
             :duration="0.35"
             @timeline:created="(tl: gsap.core.Timeline) => handleTimelineCreated(tl, 0)"
@@ -184,6 +184,7 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
     border: var(--stroke-sm) solid var(--color-cyan-400);
     border-radius: var(--radius-md);
     background: linear-gradient(to bottom, var(--color-hologram-top) 0%, var(--color-hologram-bottom) 100%);
+    box-shadow: 0 0 18px rgba(249, 115, 22, 0.18), inset 0 1px 0 rgba(249, 115, 22, 0.12);
     gap: var(--space-xxs);
     display: flex;
     flex-direction: row;

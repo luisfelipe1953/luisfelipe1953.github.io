@@ -9,6 +9,9 @@
 
 html {
   background: var(--color-background-400);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 80% 10%, rgba(249, 115, 22, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 85%, rgba(249, 115, 22, 0.05) 0%, transparent 55%);
   color: var(--color-text-400);
   --icon-color: var(--color-text-400);
   font-family: "Urbanist";
@@ -42,14 +45,14 @@ html {
 }
 
 ::selection {
-  background: #2d2a24;
-  color: rgb(255, 255, 255);
+  background: #f97316;
+  color: #060d1a;
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background: #2d2a24;
-  color: rgb(255, 255, 255);
+  background: #f97316;
+  color: #060d1a;
   text-shadow: none;
 }
 

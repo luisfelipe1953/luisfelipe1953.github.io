@@ -14,7 +14,6 @@ import type { ProjectPreview } from "../../../content/types";
 
 const tlRef = ref<gsap.core.Timeline | null>(null);
 const wrapperRef = ref<HTMLDivElement | null>(null);
-const imageRef = ref<HTMLImageElement | null>(null);
 
 const props = defineProps<{
   preview?: ProjectPreview;
@@ -32,7 +31,6 @@ onMounted(async () => {
     },
   });
   tl.fromTo(wrapperRef.value, { scale: 0.8 }, { scale: 1, duration: 0.4, ease: "power1.out" }, 0);
-  tl.fromTo(imageRef.value, { scale: 1.2 }, { scale: 1, duration: 0.4, ease: "power1.out" }, 0);
 
   tlRef.value = tl;
 });
@@ -56,10 +54,11 @@ onUnmounted(() => {
     v-if="props.preview"
   >
     <div class="preview-card-top" ref="wrapperRef">
-      <div class="preview-card-image-wrapper">
-        <div class="preview-card-image-container">
-          <img :src="props.preview.thumbnail" :alt="props.preview.title" class="preview-card-image" ref="imageRef" />
+      <div class="preview-card-panel">
+        <div class="preview-card-panel-dots">
+          <span></span><span></span><span></span>
         </div>
+        <p class="preview-card-panel-title">{{ props.preview.title }}</p>
       </div>
       <div class="preview-card-overlay">
         <div class="preview-card-edge">
@@ -181,21 +180,62 @@ onUnmounted(() => {
     }
   }
 
-  &-image {
+  &-panel {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--color-dark-blue-400) 0%, var(--color-dark-blue-600) 100%);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    box-shadow: inset 0 1px 0 rgba(249, 115, 22, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    position: relative;
+    overflow: hidden;
 
-    &-container {
-      transition: transform 0.1s ease-in-out;
-      transform: scale(calc(1 + var(--hover) * 0.02));
-      aspect-ratio: 16/9;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #f97316, transparent);
     }
 
-    &-wrapper {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background-color: var(--color-beige-500);
+    &-dots {
+      display: flex;
+      gap: 6px;
+      position: absolute;
+      top: var(--space-sm);
+      left: var(--space-sm);
+
+      span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: rgba(249, 115, 22, 0.4);
+
+        &:first-child { background-color: rgba(249, 115, 22, 0.7); }
+      }
+    }
+
+    &-title {
+      font-family: "ProFontWindows";
+      font-size: var(--font-size-title-xs);
+      font-weight: 700;
+      color: var(--color-text-cyan-400);
+      text-align: center;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      opacity: 0.9;
+
+      @include mixins.mq("md") {
+        font-size: var(--font-size-title-sm);
+      }
     }
   }
 

@@ -11,7 +11,9 @@ const { project } = defineProps<{
 
 <template>
   <div class="next-project children-unclickable" data-hoversound="hover">
-    <img :src="project.thumbnail" :alt="project.title" class="next-project-image" />
+    <div class="next-project-icon">
+      <ArrowRight class="next-project-icon-arrow" />
+    </div>
     <div class="next-project-content">
       <p class="next-project-prefix">{{ t("next-project") }}:</p>
       <h3 class="next-project-title">{{ project.title }}</h3>
@@ -85,10 +87,29 @@ const { project } = defineProps<{
     --icon-color: var(--color-text-400);
   }
 
-  &-image {
-    border-radius: var(--radius-sm);
-    max-height: 100%;
-    width: auto;
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--color-dark-blue-400), var(--color-dark-blue-600));
+    border: 1px solid rgba(249, 115, 22, 0.25);
+
+    @include mixins.mq("md") {
+      min-width: 72px;
+      height: 72px;
+    }
+
+    &-arrow {
+      width: var(--icon-size-sm);
+      --icon-color: #f97316;
+
+      @include mixins.mq("md") {
+        width: var(--icon-size-md);
+      }
+    }
   }
 
   @include mixins.hover {

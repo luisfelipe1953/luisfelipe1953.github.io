@@ -107,23 +107,23 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
 };
 
 const SERVICES_EN = [
-  { name: "Three.js & WebGL" },
-  { name: "Node.js & WebSockets" },
-  { name: "React & Vue" },
-  { name: "Kubernetes & Redis" },
-  { name: "Real-time Multiplayer" },
+  { name: "Laravel 8–11 & PHP" },
+  { name: "REST & SOAP Integrations" },
+  { name: "AI Automation (Claude API)" },
+  { name: "Data Engineering" },
+  { name: "Docker & DevOps" },
 ] as const satisfies { name: string }[];
 
-const SERVICES_DE = [
-  { name: "Three.js & WebGL" },
-  { name: "Node.js & WebSockets" },
-  { name: "React & Vue" },
-  { name: "Kubernetes & Redis" },
-  { name: "Echtzeit-Mehrspieler" },
+const SERVICES_ES = [
+  { name: "Laravel 8–11 & PHP" },
+  { name: "Integraciones REST & SOAP" },
+  { name: "Automatización IA (Claude API)" },
+  { name: "Data Engineering" },
+  { name: "Docker & DevOps" },
 ] as const satisfies { name: string }[];
 
 const services = computed(() => {
-  return locale.value === "en" ? SERVICES_EN : SERVICES_DE;
+  return locale.value === "en" ? SERVICES_EN : SERVICES_ES;
 });
 </script>
 
@@ -220,6 +220,7 @@ const services = computed(() => {
     border: var(--stroke-sm) solid var(--color-cyan-400);
     border-radius: var(--radius-md);
     background: linear-gradient(to bottom, var(--color-hologram-top) 0%, var(--color-hologram-bottom) 100%);
+    box-shadow: 0 0 18px rgba(249, 115, 22, 0.18), inset 0 1px 0 rgba(249, 115, 22, 0.12);
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
