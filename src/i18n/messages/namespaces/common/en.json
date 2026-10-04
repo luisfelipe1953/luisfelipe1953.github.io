@@ -1,7 +1,7 @@
 {
   "about": "About",
-  "about-intro": "Backend Developer with 3+ years building high-demand systems in PHP/Laravel. Expert in multi-provider integrations (28+ certified vendors) for B2B platforms processing 50K+ searches/day.<br />Experienced in data engineering (10M+ records), regulatory compliance, and AI-powered automation with Claude API &amp; Grok.",
-  "about-tagline": "Integrates complex systems, optimizes at scale, and automates workflows end-to-end.",
+  "about-intro": "Full stack developer with 4+ years building high-demand systems: Laravel and Node.js/TypeScript on the backend, Angular and Vue 3 on the front end. Integrated 50+ certified suppliers into a B2B travel platform processing 50K+ searches per day.<br />Experienced in data engineering (10M+ records), recurring payments, E2E testing with Playwright and AI features in production (OpenAI, Claude API).",
+  "about-tagline": "Builds products end to end: integrates complex systems, optimizes at scale and automates with AI.",
   "back-to-home": "Back to home",
   "original-concept-by": "Originally created by",
   "contact": "Contact",
@@ -11,7 +11,7 @@
   "germany": "Montería, Colombia",
   "get-in-touch": "Get in touch",
   "go-to": "Go to",
-  "job-title": "Backend Developer",
+  "job-title": "Full Stack Developer",
   "lets-work-together": "Let's work<br/>together!",
   "legal": "Legal Notice",
   "live-view": "Live View",

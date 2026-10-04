@@ -1,43 +1,30 @@
-# Portfolio (2025)
+# Felipe Betancur — Portafolio
 
-Personal portfolio site: project case studies, lightweight 3D and shader demos, bilingual copy (English and German).
+Portafolio personal de Felipe Betancur, Full Stack Developer (Laravel, Node.js/TypeScript, Angular, Vue 3).
+Publicado en https://luisfelipe1953.github.io/
 
-Built with **Vue 3**, **TypeScript**, and **Vite**. Motion via **GSAP** and **Lenis**, 3D via **three.js**, audio via **Howler**. GLSL is compiled through **vite-plugin-glsl**.
+Proyectos destacados: plataforma B2B de viajes Octopus (+50 proveedores, 50K búsquedas/día), dashboard de QA con Playwright, Hotel Intelligence Score, ERP DIAN y facturación municipal.
+
+Hecho con **Vue 3**, **TypeScript** y **Vite**; animaciones con **GSAP** y **Lenis**, 3D con **three.js** y audio con **Howler**.
 
 ## Scripts
 
-| Command        | Description                          |
-| -------------- | ------------------------------------ |
-| `npm run dev`   | Dev server on port **3000** (`strictPort`) |
-| `npm run build` | `vue-tsc` then production bundle to `dist/` |
-| `npm run preview` | Serve the production build locally |
-| `npm run typecheck` | Typecheck only (`vue-tsc -b`) |
+| Comando | Descripción |
+| --- | --- |
+| `npm run dev` | Servidor de desarrollo en el puerto **3000** |
+| `npm run build` | `vue-tsc` y build de producción en `dist/` |
+| `npm run preview` | Sirve el build localmente |
+| `npm run typecheck` | Solo revisión de tipos |
 
-## Content
+## Contenido
 
-- **Projects**: `src/content/projects/{en,de}/<slug>.ts` — copy, tags, media, links. Slugs must align with `projectIds` in `src/content/projects/index.ts`.
-- **Previews / listing**: `src/content/projects/previews/`.
-- **Tags**: variants and labels live in `src/components/tagVariants.ts` (used by `Tag.vue` and content types).
-
-## Stack (high level)
-
-- Vue 3 (`<script setup>`), SCSS with shared mixins (`src/assets/styles/`)
-- i18n helpers under `src/i18n/`
-- WebGL / GLSL under `src/three/` where applicable
+- **Proyectos**: `src/content/projects/{es,en}/<slug>.ts`. Los slugs deben coincidir con `projectIds` en `src/content/projects/index.ts`.
+- **Tarjetas de proyectos**: `src/content/projects/previews/`.
+- **Textos**: `src/i18n/messages/namespaces/common/{es,en}.json`.
 
 ## Credits & Attribution
 
-This project was created and designed by David Heckhoff.
-
-If you use this project or substantial parts of its source code as a base for your own portfolio or work, attribution must be preserved.
-
-Please keep:
-
-- existing credit comments in the source code
-- this attribution section in the README
-- a visible reference to the original project/repository in derivative works
+This project is based on the portfolio created and designed by David Heckhoff.
 
 Original portfolio:
 -> https://david-hckh.com
-
-Commercial reuse or redistribution of substantial portions of this project without permission is prohibited.

@@ -107,19 +107,21 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
 };
 
 const SERVICES_EN = [
-  { name: "Laravel 8–11 & PHP" },
+  { name: "Laravel & Node.js / TypeScript" },
+  { name: "Angular & Vue 3" },
   { name: "REST & SOAP Integrations" },
   { name: "AI Automation (Claude API)" },
   { name: "Data Engineering" },
-  { name: "Docker & DevOps" },
+  { name: "Playwright E2E & Docker" },
 ] as const satisfies { name: string }[];
 
 const SERVICES_ES = [
-  { name: "Laravel 8–11 & PHP" },
+  { name: "Laravel & Node.js / TypeScript" },
+  { name: "Angular & Vue 3" },
   { name: "Integraciones REST & SOAP" },
   { name: "Automatización IA (Claude API)" },
   { name: "Data Engineering" },
-  { name: "Docker & DevOps" },
+  { name: "Playwright E2E & Docker" },
 ] as const satisfies { name: string }[];
 
 const services = computed(() => {

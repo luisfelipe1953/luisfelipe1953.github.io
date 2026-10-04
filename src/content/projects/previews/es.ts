@@ -1,8 +1,10 @@
-import thumbnailOctopus from "../../../assets/thumbnails/cubewar.webp";
-import thumbnailHotelai from "../../../assets/thumbnails/streakon.webp";
-import thumbnailSubscription from "../../../assets/thumbnails/quibbo.webp";
-import thumbnailErpdian from "../../../assets/thumbnails/sharkie.webp";
-import thumbnailFacturacion from "../../../assets/thumbnails/pokedex.webp";
+import thumbnailOctopus from "../../../assets/thumbnails/octopus.webp";
+import thumbnailHotelai from "../../../assets/thumbnails/hotelai.webp";
+import thumbnailSubscription from "../../../assets/thumbnails/subscription.webp";
+import thumbnailErpdian from "../../../assets/thumbnails/erpdian.webp";
+import thumbnailFacturacion from "../../../assets/thumbnails/facturacion.webp";
+
+import thumbnailQa from "../../../assets/thumbnails/qa.webp";
 
 import type { ProjectPreview } from "../../types";
 
@@ -11,7 +13,13 @@ export default [
     title: "Octopus Platform",
     slug: "octopus",
     thumbnail: thumbnailOctopus,
-    description: "Agregador B2B de viajes — 50K búsquedas/día",
+    description: "Agregador B2B de viajes — +50 proveedores, 50K búsquedas/día",
+  },
+  {
+    title: "Dashboard de QA",
+    slug: "qa",
+    thumbnail: thumbnailQa,
+    description: "Pruebas E2E con Playwright + dashboard en Node.js",
   },
   {
     title: "Hotel Intelligence Score",
